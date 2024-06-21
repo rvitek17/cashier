@@ -2,10 +2,11 @@
 
 namespace Laravel\Cashier\Tests\Fixtures;
 
+use Illuminate\Foundation\Auth\User as Model;
+use Illuminate\Notifications\Notifiable;
 use Laravel\Cashier\Billable;
-use Illuminate\Database\Eloquent\Model as Eloquent;
 
-class User extends Eloquent
+class User extends Model
 {
-    use Billable;
+    use Billable, Notifiable;
 }
