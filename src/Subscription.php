@@ -27,7 +27,10 @@ class Subscription extends Model
     use HasFactory;
     use InteractsWithPaymentBehavior;
     use Prorates;
-
+    
+    //changing the name of the table to stripe_subscriptions
+    protected $table = 'stripe_subscriptions';
+    
     /**
      * The attributes that are not mass assignable.
      *
